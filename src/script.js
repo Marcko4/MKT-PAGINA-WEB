@@ -16,3 +16,26 @@ function mostrarCollar() {
     // Mostrar el collar personalizado en el área de vista previa
     document.getElementById("collar-personalizado").innerHTML = collarHTML;
 }
+// Obtener el botón de búsqueda y el campo de búsqueda
+var botonBusqueda = document.getElementById("boton-busqueda");
+var campoBusqueda = document.getElementById("campo-busqueda");
+
+// Agregar un evento de clic al botón de búsqueda
+botonBusqueda.addEventListener("click", function() {
+    // Mostrar o ocultar el campo de búsqueda al hacer clic en el botón
+    if (campoBusqueda.style.display === "none") {
+        campoBusqueda.style.display = "block";
+    } else {
+        campoBusqueda.style.display = "none";
+    }
+});
+var textoBusqueda = document. createElement ("span");
+textoBusqueda.innerText = "Buscar Productos"; 
+document.getElementById ("boton-busqueda").appendChild(textoBusqueda); 
+
+document.getElementById("boton-busqueda").addEventListener("mouseenter" , function(){
+    textoBusqueda.style.opacity = "1"; 
+});
+document.getElementById("boton-busqueda").addEventListener("mouseleave" , function(){
+    textoBusqueda.style.opacity ="0";
+});

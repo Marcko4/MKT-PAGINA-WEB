@@ -3,12 +3,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: #F0F0F0; /* Color de fondo claro */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color:  #D2B48C; /* Color de fondo de la cabecera */
+    color: #000000; /* Color de texto de la cabecera */
     padding: 10px 0;
     text-align: center;
 }
@@ -25,16 +25,83 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #000000; /* Color de texto de los enlaces */
     font-weight: bold;
 }
+nav ul li a img {
+    width: 20px;
+    height: auto;
+}
+nav ul li #boton-busqueda {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+nav ul li #boton-busqueda:hover {
+    transform: scale(1.1);
+}
+
+#campo-busqueda {
+    display: none;
+    border: none;
+    border-bottom: 2px solid #D2B48C; /* Color de borde inicial */
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+    transition: border-bottom-color 0.3s ease; /* Animación de transición */
+}
+
+#campo-busqueda::placeholder {
+    color: #D2B48C; /* Color del texto de marcador de posición */
+}
+
+#boton-busqueda:hover {
+    cursor: pointer;
+}
+
+#boton-busqueda:hover #campo-busqueda {
+    display: inline-block;
+    width: 0;
+    transition: width 0.3s ease; /* Animación de expansión */
+}
+
+#boton-busqueda:hover #campo-busqueda:focus {
+    width: 200px; /* Ancho máximo al enfocar */
+    border-bottom-color: #2196F3; /* Color de borde al enfocar */
+}
+/* Establecer la posición relativa para el contenedor de la barra de búsqueda */
+#barra-busqueda {
+    position: relative;
+}
+
+/* Posicionar el campo de búsqueda al lado del ícono de la lupa */
+#campo-busqueda {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 5px); /* Posiciona el campo de búsqueda justo al lado del ícono */
+    display: none; /* Inicialmente oculto */
+    border: none;
+    border-bottom: 2px solid #000000; /* Color de borde inicial */
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+    transition: border-bottom-color 0.3s ease; /* Animación de transición */
+}
+
+/* Establecer la transición de ancho para el campo de búsqueda */
+#boton-busqueda:hover #campo-busqueda {
+    display: inline-block; /* Mostrar al pasar el cursor sobre el ícono */
+    width: 200px; /* Ancho máximo al pasar el cursor sobre el ícono */
+}
+
+
 
 main {
     padding: 20px;
 }
 
 h2 {
-    color: #333;
+    color: #333; /* Color de los títulos */
 }
 
 #herramientas {
@@ -44,7 +111,7 @@ h2 {
 }
 
 button {
-    background-color: #333;
+    background-color: #2196F3; /* Color azul de los botones */
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -53,7 +120,7 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #1976D2; /* Color azul oscuro al pasar el cursor */
 }
 
 #collar-preview {
@@ -125,4 +192,32 @@ button:hover {
         opacity: 1;
         transform: scale3d(1, 1, 1);
     }
+}
+
+/* Nuevos estilos */
+.logo {
+    width: 300px; /* Tamaño del logo */
+    height: auto; /* Espacio alrededor del logo */
+}
+
+#personalizados {
+    background-color: #EFEFEF; /* Color de fondo para la sección de personalizados */
+    padding: 20px; /* Espacio interior */
+}
+
+.personalizados-container {
+    display: flex;
+    align-items: center;
+}
+
+.personalizados-info {
+    margin-left: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.producto {
+    margin-bottom: 20px; /* Espacio entre las imágenes de productos */
+}
+
+.producto img {
+    width: 100%; /* Las imágenes ocupan todo el ancho disponible */
 }

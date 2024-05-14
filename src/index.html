@@ -8,13 +8,19 @@
 </head>
 <body>
     <header>
+        <!-- Agregar el logo de la empresa en la esquina superior izquierda -->
+        <img src="images/logo.png" alt="Logo de PetStyle" class="logo">
         <h1>PetStyle</h1>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#producto">Productos</a></li>
+                <li><a href="#producto">Accesorios para mascotas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#diseñar">Diseñar collar</a></li> <!-- Nuevo enlace -->
+                <li><a href="#carrito">Carrito</a></li>
+                <li id="barra-busqueda">
+                    <img src="images/lupa.png" alt="Buscar" id="boton-busqueda">
+                    <input type="text" id="campo-busqueda" placeholder="Buscar Productos">
+                </li>
             </ul>
         </nav>
     </header>
@@ -26,14 +32,37 @@
             <p>¡Encuentra los mejores accesorios para tu mascota!</p>
         </section>
 
-        <section id="producto">
-            <!-- Contenido de la sección de productos -->
-            <h2>Nuestros productos</h2>
-            <!-- Aquí puedes agregar imágenes y descripciones de tus productos -->
+        <!-- Agregar sección de Accesorios personalizados para perros y gatos -->
+        <section id="personalizados">
+            <div class="personalizados-container">
+                <img src="perros_y_gatos.png" alt="Perros y Gatos con Collares">
+                <div class="personalizados-info">
+                    <h3>Accesorios personalizados para perros y gatos</h3>
+                    <p>Chapas y bandanas para perros y gatos</p>
+                    <p>Packaging sostenible</p>
+                    <p>Regalo original</p>
+                </div>
+            </div>
         </section>
 
+        <!-- Sección de imágenes de productos -->
+        <section id="productos">
+            <div class="producto">
+                <img src="placas_reciclables.png" alt="Placas reciclables">
+                <p>Placas reciclables</p>
+            </div>
+            <div class="producto">
+                <img src="placas_diseños.png" alt="Placas con diseños">
+                <p>Placas con diseños</p>
+            </div>
+            <div class="producto">
+                <img src="placas_madera.png" alt="Placas de madera">
+                <p>Placas de madera</p>
+            </div>
+        </section>
+
+        <!-- Sección de contacto -->
         <section id="contacto">
-            <!-- Contenido de la sección de contacto -->
             <h2>Contacto</h2>
             <form id="formulario-contacto">
                 <label for="nombre">Nombre:</label>
