@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetStyle - Venta de accesorios para mascotas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>PetStyle</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#producto">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#diseñar">Diseñar collar</a></li> <!-- Nuevo enlace -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <!-- Contenido de la sección de inicio -->
+            <h2>Bienvenido a PetStyle</h2>
+            <p>¡Encuentra los mejores accesorios para tu mascota!</p>
+        </section>
+
+        <section id="producto">
+            <!-- Contenido de la sección de productos -->
+            <h2>Nuestros productos</h2>
+            <!-- Aquí puedes agregar imágenes y descripciones de tus productos -->
+        </section>
+
+        <section id="contacto">
+            <!-- Contenido de la sección de contacto -->
+            <h2>Contacto</h2>
+            <form id="formulario-contacto">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="diseñar">
+            <h2>¡Diseña el collar de tu mascota!</h2>
+            <div id="herramientas" class="animated fadeInUp">
+                <!-- Aquí puedes agregar herramientas para diseñar el collar -->
+                <h3>Selecciona el color:</h3>
+                <input type="color" id="color"><br><br>
+                
+                <h3>Elige el diseño:</h3>
+                <select id="diseño">
+                    <option value="estampado1">Estampado 1</option>
+                    <option value="estampado2">Estampado 2</option>
+                    <option value="estampado3">Estampado 3</option>
+                </select><br><br>
+                
+                <h3>Selecciona la medida:</h3>
+                <input type="radio" id="pequeño" name="medida" value="pequeño">
+                <label for="pequeño">Pequeño</label><br>
+                <input type="radio" id="mediano" name="medida" value="mediano">
+                <label for="mediano">Mediano</label><br>
+                <input type="radio" id="grande" name="medida" value="grande">
+                <label for="grande">Grande</label><br><br>
+                
+                <h3>¿Con dije?</h3>
+                <input type="checkbox" id="dije" name="dije">
+                <label for="dije">Sí, con dije</label><br><br>
+                
+                <h3>Para:</h3>
+                <input type="radio" id="perro" name="tipo" value="perro">
+                <label for="perro">Perro</label><br>
+                <input type="radio" id="gato" name="tipo" value="gato">
+                <label for="gato">Gato</label><br><br>
+                
+                <button onclick="mostrarCollar()" class="animated bounceIn">Mostrar collar</button>
+            </div>
+            <div id="collar-preview" class="animated fadeInRight">
+                <!-- Aquí se mostrará una vista previa del collar -->
+                <h3>Vista previa del collar:</h3>
+                <div id="collar-personalizado"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PetStyle - Venta de accesorios para mascotas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
