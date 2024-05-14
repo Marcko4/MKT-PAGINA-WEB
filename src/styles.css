@@ -199,6 +199,9 @@ button:hover {
     width: 300px; /* Tamaño del logo */
     height: auto; /* Espacio alrededor del logo */
 }
+.logo + h1 {
+    display: none;
+}
 
 #personalizados {
     background-color: #EFEFEF; /* Color de fondo para la sección de personalizados */
