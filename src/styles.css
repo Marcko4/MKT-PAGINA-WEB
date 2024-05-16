@@ -7,10 +7,18 @@ body {
 }
 
 header {
-    background-color:  #D2B48C; /* Color de fondo de la cabecera */
+    background-color:  #f1e0ca; /* Color de fondo de la cabecera */
     color: #000000; /* Color de texto de la cabecera */
     padding: 10px 0;
     text-align: center;
+}
+
+#inicio h2 {
+    font-size: 2em; /* Aumentar el tamaño del texto */
+}
+
+#inicio p {
+    font-size: 1.5em; /* Aumentar el tamaño del texto */
 }
 
 nav ul {
@@ -196,7 +204,7 @@ button:hover {
 
 /* Nuevos estilos */
 .logo {
-    width: 300px; /* Tamaño del logo */
+    width: 350px; /* Tamaño del logo */
     height: auto; /* Espacio alrededor del logo */
 }
 .logo + h1 {
@@ -207,23 +215,92 @@ button:hover {
     background-color: #EFEFEF; /* Color de fondo para la sección de personalizados */
     padding: 20px; /* Espacio interior */
     display: flex;
-    justify-content: center; /* Centrar horizontalmente el contenido */
+    justify-content: flex-end;
+    margin-bottom: 100px; /* Centrar horizontalmente el contenido */
 }
 
 .personalizados-container {
     display: flex;
-    align-items: center; /* Alinear elementos verticalmente */
+    align-items: center; 
+    max-width: 70%;/* Alinear elementos verticalmente */
 }
 
 .personalizados-container img {
-    width: 300px; /* Ajustar el tamaño según sea necesario */
+    width: 2000px; /* Ajustar el tamaño según sea necesario */
     height: auto; /* Mantener la proporción de la imagen */
     margin-right: 20px; /* Espacio entre la imagen y el texto */
 }
 
 .personalizados-info {
-    text-align: left; /* Alinear texto a la izquierda */
+    flex: 1; 
+    max-width: 70%;
+    text-align: left;
+    font-size: 1.6em; /* Alinear texto a la izquierda */
 }
+
+.personalizados-info h3 {
+    font-size: 2em;
+}
+
+/* Estilos para el rectángulo verde */
+/* Estilos para el rectángulo verde */
+.green-background {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 200px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #a7c39c; /* Agregamos el color de fondo */
+    width: 85%;
+}
+
+
+/* Estilos para el logo de reciclaje */
+.logoreciclaje {
+    width: 200px; /* Ajusta el ancho del logo de reciclaje */
+    height: auto; /* Mantiene la proporción del logo de reciclaje */
+}
+
+/* Estilos para el logo de árbol */
+.logoarbol {
+    width: 200px; /* Ajusta el ancho del logo de árbol */
+    height: auto; /* Mantiene la proporción del logo de árbol */
+}
+
+/* Estilos para el logo de regalo */
+.logoregalo {
+    width: 70px; /* Ajusta el ancho del logo de regalo */
+    height: auto; /* Mantiene la proporción del logo de regalo */
+}
+
+
+/* Estilos para los elementos dentro del rectángulo verde */
+.green-text p {
+    margin: 0;
+    padding-right: 20px;
+    font-size: 1.5em;
+}
+
+
+/* Alinear los elementos "Chapas y bandanas para perros y gatos", "Packaging sostenible" y "Regalo original" uno al lado del otro */
+.green-text {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.green-background h3 {
+    margin-bottom: 20px;
+
+}
+
+.green-background p {
+    margin-bottom: 10px;
+}
+
 /* ... otros estilos existentes ... */
 
 /* ... otros estilos existentes ... */
@@ -239,6 +316,7 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px; /* Espacio entre los productos */
+    margin-top: 200px;
 }
 
 .producto {
@@ -336,7 +414,7 @@ button:hover {
     font-size: 2.5rem;
     margin: 1.5rem 0 2rem;
     text-transform: uppercase;
-    color: #4facfe;
+    color:  #829954;
 }
 
 .blog-post_text {
@@ -360,11 +438,11 @@ button:hover {
     color: #fff;
     text-decoration: none;
     border-radius: .8rem;
-    background: linear-gradient(to right, #45cfc8 0%, #f789e4 100%);
+    background-color: #D2B48C; /* Cambia el color de fondo al marrón pastel */
 }
 
 .blog-post_cta:hover {
-    background: linear-gradient(to right, #f789e4 0%, #45cfc8 100%);
+    background-color: #b39c7d; /* Cambia el color de fondo al marrón pastel más oscuro al pasar el cursor */
 }
 
 @media screen and (max-width: 1068px) {
