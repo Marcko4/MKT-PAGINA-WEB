@@ -206,21 +206,76 @@ button:hover {
 #personalizados {
     background-color: #EFEFEF; /* Color de fondo para la sección de personalizados */
     padding: 20px; /* Espacio interior */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente el contenido */
 }
 
 .personalizados-container {
     display: flex;
-    align-items: center;
+    align-items: center; /* Alinear elementos verticalmente */
+}
+
+.personalizados-container img {
+    width: 300px; /* Ajustar el tamaño según sea necesario */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
 }
 
 .personalizados-info {
-    margin-left: 20px; /* Espacio entre la imagen y el texto */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+/* ... otros estilos existentes ... */
+
+/* ... otros estilos existentes ... */
+
+/* Estilos para la sección de productos */
+/* Estilos para la sección de productos */
+/* Estilos para la sección de productos */
+/* Estilos para la sección de productos */
+/* Estilos para la sección de productos */
+/* Estilos para la sección de productos */
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Espacio entre los productos */
 }
 
 .producto {
-    margin-bottom: 20px; /* Espacio entre las imágenes de productos */
+    position: relative; /* Establecer posición relativa para el contenedor de producto */
+    width: 250px; /* Ancho máximo del contenedor de producto */
+    margin: 20px; /* Margen alrededor de cada producto */
+    overflow: hidden; /* Ocultar contenido que desborde */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .producto img {
-    width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho del contenedor */
+    height: auto;
+    display: block; /* Mostrar la imagen como bloque para ocupar todo el espacio */
+    transition: transform 0.3s ease; /* Agregar transición suave */
 }
+
+.producto:hover img {
+    transform: scale(1.1); /* Aumentar el tamaño de la imagen al pasar el cursor */
+}
+
+.producto .texto-producto {
+    position: absolute; /* Establecer posición absoluta para el texto */
+    top: 50%; /* Alinear el texto verticalmente en el centro */
+    left: 50%; /* Alinear el texto horizontalmente en el centro */
+    transform: translate(-50%, -50%); /* Centrar el texto exactamente */
+    width: 100%; /* Ancho completo para el texto */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el texto */
+    padding: 10px; /* Relleno alrededor del texto */
+    text-align: center; /* Alinear el texto al centro */
+    font-weight: bold; /* Texto en negrita */
+    color: #333; /* Color del texto */
+    font-size: 1.5em; /* Tamaño de fuente aumentado */
+}
+
+
+
+
+
