@@ -63,46 +63,22 @@ nav ul li #boton-busqueda:hover {
     color: #D2B48C; /* Color del texto de marcador de posición */
 }
 
-#boton-busqueda:hover {
-    cursor: pointer;
-}
-
-#boton-busqueda:hover #campo-busqueda {
-    display: inline-block;
-    width: 0;
-    transition: width 0.3s ease; /* Animación de expansión */
-}
-
-#boton-busqueda:hover #campo-busqueda:focus {
-    width: 200px; /* Ancho máximo al enfocar */
-    border-bottom-color: #2196F3; /* Color de borde al enfocar */
-}
-/* Establecer la posición relativa para el contenedor de la barra de búsqueda */
 #barra-busqueda {
-    position: relative;
+    position: relative; /* Establecer posición relativa para el contenedor de la barra de búsqueda */
 }
 
-/* Posicionar el campo de búsqueda al lado del ícono de la lupa */
-#campo-busqueda {
+#boton-busqueda span {
     position: absolute;
-    top: 0;
-    left: calc(100% + 5px); /* Posiciona el campo de búsqueda justo al lado del ícono */
-    display: none; /* Inicialmente oculto */
-    border: none;
-    border-bottom: 2px solid #000000; /* Color de borde inicial */
-    outline: none;
-    font-size: 16px;
-    padding: 5px;
-    transition: border-bottom-color 0.3s ease; /* Animación de transición */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-/* Establecer la transición de ancho para el campo de búsqueda */
-#boton-busqueda:hover #campo-busqueda {
-    display: inline-block; /* Mostrar al pasar el cursor sobre el ícono */
-    width: 200px; /* Ancho máximo al pasar el cursor sobre el ícono */
+#boton-busqueda:hover span {
+    opacity: 1;
 }
-
-
 
 main {
     padding: 20px;
@@ -222,7 +198,7 @@ button:hover {
 .personalizados-container {
     display: flex;
     align-items: center; 
-    max-width: 70%;/* Alinear elementos verticalmente */
+    max-width: 70%; /* Alinear elementos verticalmente */
 }
 
 .personalizados-container img {
@@ -243,7 +219,6 @@ button:hover {
 }
 
 /* Estilos para el rectángulo verde */
-/* Estilos para el rectángulo verde */
 .green-background {
     display: flex;
     justify-content: space-between;
@@ -255,61 +230,51 @@ button:hover {
     width: 85%;
 }
 
-
 /* Estilos para el logo de reciclaje */
 .logoreciclaje {
-    width: 200px; /* Ajusta el ancho del logo de reciclaje */
+    width: 450px; /* Tamaño aumentado al triple del tamaño inicial de 150px */
     height: auto; /* Mantiene la proporción del logo de reciclaje */
+    
 }
 
 /* Estilos para el logo de árbol */
 .logoarbol {
-    width: 200px; /* Ajusta el ancho del logo de árbol */
+    width: 450px; /* Tamaño aumentado al triple del tamaño inicial de 150px */
     height: auto; /* Mantiene la proporción del logo de árbol */
+    
 }
 
 /* Estilos para el logo de regalo */
 .logoregalo {
-    width: 70px; /* Ajusta el ancho del logo de regalo */
+    width: 180px; /* Tamaño ajustado a 150px */
     height: auto; /* Mantiene la proporción del logo de regalo */
+    margin-right: 20px; /* Separación entre el logo y el texto */
 }
 
-
 /* Estilos para los elementos dentro del rectángulo verde */
-.green-text p {
-    margin: 0;
-    padding-right: 20px;
+.green-text {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    text-align: center; /* Centrar el texto */
     font-size: 1.5em;
 }
 
 
-/* Alinear los elementos "Chapas y bandanas para perros y gatos", "Packaging sostenible" y "Regalo original" uno al lado del otro */
-.green-text {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+
+.green-text p {
+    margin-right: 100px; /* Aumenta el margen derecho del texto */
 }
 
 
 .green-background h3 {
     margin-bottom: 20px;
-
 }
 
 .green-background p {
     margin-bottom: 10px;
 }
 
-/* ... otros estilos existentes ... */
-
-/* ... otros estilos existentes ... */
-
-/* Estilos para la sección de productos */
-/* Estilos para la sección de productos */
-/* Estilos para la sección de productos */
-/* Estilos para la sección de productos */
-/* Estilos para la sección de productos */
 /* Estilos para la sección de productos */
 #productos {
     display: flex;
@@ -359,10 +324,10 @@ button:hover {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-  }
+}
 
-  /*estilo de los cards de presentación*/
- .blog-post{
+/* Estilo de los cards de presentación */
+.blog-post {
     width: 100%;
     max-width: 98rem;
     padding: 5rem;
@@ -372,17 +337,16 @@ button:hover {
     align-items: center;
     border-radius: .8rem;
     margin: 10px;
+}
 
- }
-
- .blog-post_img {
+.blog-post_img {
     min-width: 35rem;
     max-width: 35rem;
     height: 30rem;
     transform: translateX(-8rem);
     position: relative;
 }
-  
+
 .blog-post_img img {
     width: 100%;
     height: 100%;
@@ -401,7 +365,7 @@ button:hover {
     box-shadow: .5rem .5rem 3rem 1px rgba(0, 0, 0, 0.5);
     border-radius: .8rem;
 }
- 
+
 .blog-post_date span {
     display: block;
     color: #00000080;
@@ -415,12 +379,6 @@ button:hover {
     margin: 1.5rem 0 2rem;
     text-transform: uppercase;
     color:  #829954;
-}
-
-.blog-post_text {
-    margin-bottom: 3rem;
-    font-size: 1.4rem;
-    color: #000000b3;
 }
 
 .blog-post_text {
