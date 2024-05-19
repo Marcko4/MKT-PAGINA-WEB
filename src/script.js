@@ -1,41 +1,63 @@
 function mostrarCollar() {
-    // Obtener los valores seleccionados por el usuario
-    var color = document.getElementById("color").value;
-    var diseño = document.getElementById("diseño").value;
-    var medida = document.querySelector('input[name="medida"]:checked').value;
-    var dije = document.getElementById("dije").checked;
-    var tipo = document.querySelector('input[name="tipo"]:checked').value;
+    var color = document.querySelector('.color.selected');
+    if (!color) {
+        alert("Por favor, selecciona un color.");
+        return;
+    }
+    color = color.dataset.color;
 
-    // Construir el collar personalizado
-    var collarHTML = '<div style="background-color: ' + color + '; width: 200px; height: 20px; margin-bottom: 10px;"></div>';
-    collarHTML += '<p>Diseño: ' + diseño + '</p>';
-    collarHTML += '<p>Medida: ' + medida + '</p>';
-    collarHTML += '<p>Dije: ' + (dije ? 'Sí' : 'No') + '</p>';
-    collarHTML += '<p>Tipo: ' + tipo + '</p>';
+    document.querySelectorAll('.color').forEach(function(color) {
+        color.addEventListener('click', function() {
+            document.querySelectorAll('.color').forEach(function(c) {
+                c.classList.remove('selected');
+            });
+            this.classList.add('selected');
+        });
+    });
 
-    // Mostrar el collar personalizado en el área de vista previa
+    var design = document.querySelector('input[name="diseno"]:checked').value;
+
+    var collarHTML = '';
+
+    // Si el color seleccionado es rosa y el diseño no es reciclable, reducir su tamaño
+    if (color === "rosa" && design !== "reciclable") {
+        collarHTML += '<img src="images/etiquetarosa.png" alt="rosa" style="width: 20%;">';
+    } else {
+        // Si el diseño es reciclable, mostrar etiquetamadera sin importar el color seleccionado
+        if (design === "reciclable") {
+            collarHTML += '<img src="images/etiquetamadera.png" alt="etiquetamadera" style="width: 20%;">';
+        } else {
+            // Agrega la vista previa de la etiqueta según el color seleccionado
+            collarHTML += '<img src="images/etiqueta' + color + '.png" alt="' + color + '" style="width: 20%;">';
+        }
+    }
+
+    // Agrega la imagen del diseño seleccionado
+    collarHTML += '<img src="images/' + design + '.jpg" alt="' + design + '" style="width: 20%;">';
+
     document.getElementById("collar-personalizado").innerHTML = collarHTML;
 }
-// Obtener el botón de búsqueda y el campo de búsqueda
-var botonBusqueda = document.getElementById("boton-busqueda");
-var campoBusqueda = document.getElementById("campo-busqueda");
 
-// Agregar un evento de clic al botón de búsqueda
-botonBusqueda.addEventListener("click", function() {
-    // Mostrar o ocultar el campo de búsqueda al hacer clic en el botón
-    if (campoBusqueda.style.display === "none") {
-        campoBusqueda.style.display = "block";
-    } else {
-        campoBusqueda.style.display = "none";
-    }
+document.querySelectorAll('.color').forEach(function(color) {
+    color.addEventListener('click', function() {
+        document.querySelectorAll('.color').forEach(function(c) {
+            c.classList.remove('selected');
+        });
+        this.classList.add('selected');
+    });
 });
-var textoBusqueda = document. createElement ("span");
-textoBusqueda.innerText = "Buscar Productos"; 
-document.getElementById ("boton-busqueda").appendChild(textoBusqueda); 
 
-document.getElementById("boton-busqueda").addEventListener("mouseenter" , function(){
-    textoBusqueda.style.opacity = "1"; 
-});
-document.getElementById("boton-busqueda").addEventListener("mouseleave" , function(){
-    textoBusqueda.style.opacity ="0";
+document.querySelectorAll('input[name="diseno"]').forEach(function(design) {
+    design.addEventListener('change', function() {
+        var selectedDesign = document.querySelector('input[name="diseno"]:checked').value;
+        if (selectedDesign === "reciclable") {
+            document.querySelectorAll('.color').forEach(function(c) {
+                c.disabled = true;
+            });
+        } else {
+            document.querySelectorAll('.color').forEach(function(c) {
+                c.disabled = false;
+            });
+        }
+    });
 });
