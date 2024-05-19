@@ -14,26 +14,31 @@
 </head>
 <body>
     <header>
-        <!-- Agregar el logo de la empresa en la esquina superior izquierda -->
-        <img src="images/logo.png" alt="Logo de PetStyle" class="logo">
-        <h1>PetStyle</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#producto">Accesorios para mascotas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#carrito">Carrito</a></li>
-                <li id="barra-busqueda">
-                    <img src="images/lupa.png" alt="Buscar" id="boton-busqueda">
-                    <input type="text" id="campo-busqueda" placeholder="Buscar Productos">
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="navbar">
+                <img src="images/logo.png" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="">INICIO</a></li>
+                        <li><a href="">ACCESORIOS PARA MASCOTAS</a></li>
+                        <li><a href="">CONTACTO</a></li>
+                    </ul>
+                </nav>
+                <img src="images/menu.png" class="menu-icon">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1>Bienvenido a PetStyle!</h1>
+                    <p>Accesorios personalizados para perros y gatos</p>
+                    <button type="button">Explorar</button>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section id="inicio">
-            <!-- Contenido de la sección de inicio -->
+        <!--<section id="inicio">
+             Contenido de la sección de inicio 
             <h2>Bienvenido a PetStyle</h2>
             <p>¡Encuentra los mejores accesorios para tu mascota!</p>
         </section>
@@ -42,9 +47,6 @@
         <section id="personalizados">
             <div class="personalizados-container">
                 <div class="personalizados-info">
-                    <h3>Accesorios personalizados para perros y gatos</h3>
-                </div>
-                <img src="images/catcollar.png" alt="Perros y Gatos con Collares" class="personalizados-info">
             </div>
         </section>
 

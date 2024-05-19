@@ -1,3 +1,4 @@
+
 function mostrarCollar() {
     var color = document.querySelector('.color.selected');
     if (!color) {
@@ -61,3 +62,10 @@ document.querySelectorAll('input[name="diseno"]').forEach(function(design) {
         }
     });
 });
+<<<<<<< HEAD
+document.getElementById("boton-busqueda").addEventListener("mouseleave" , function(){
+    textoBusqueda.style.opacity ="0";
+});
+
+=======
+>>>>>>> 2995e41da85193838577f2641a2457d7b1100f3d
