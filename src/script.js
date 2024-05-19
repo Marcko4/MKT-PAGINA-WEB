@@ -66,3 +66,21 @@ document.querySelectorAll('input[name="diseno"]').forEach(function(design) {
 document.getElementById("boton-busqueda").addEventListener("mouseleave" , function(){
     textoBusqueda.style.opacity ="0";
 });
+document.addEventListener('DOMContentLoaded', function () {
+    // Función para desplazamiento suave a una sección
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Manejadores de eventos para enlaces de navegación
+    document.getElementById('nav-accesorios').addEventListener('click', function (event) {
+        event.preventDefault(); // Previene el comportamiento predeterminado del enlace
+        scrollToSection('disena-collar'); // Navega a la sección Diseña el Collar de tu Mascota
+    });
+
+    document.getElementById('nav-contacto').addEventListener('click', function (event) {
+        event.preventDefault();
+        scrollToSection('contacto'); // Navega a la sección de Contacto
+    });
+});

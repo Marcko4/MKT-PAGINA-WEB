@@ -6,30 +6,15 @@ body {
     background-color: #F0F0F0; /* Color de fondo claro */
 }
 
-.col {
-    flex-basis: 40%; /* Mantenemos el ancho del contenedor */
-    margin-left: -50%;
-}
-
-.col h1 {
-    text-align: left; /* Alineamos el texto a la izquierda */
-}
-
 header {
-    width: 100;
+    width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/background.png);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/background.png);
     background-position: center;
     background-size: cover;
     padding-left: 9%;
     padding-right: 2%;
     box-sizing: border-box;
-}
-
-
-.container {
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    padding: 0 2%; /* Añade un poco de padding para evitar que los elementos toquen los bordes */
 }
 
 .navbar {
@@ -47,12 +32,17 @@ header {
     margin-top: -70px; /* Puedes ajustar este valor según sea necesario */
 }
 
-.navbar ul li:last-child a {
-    font-size: 1.2em; /* Puedes ajustar este valor según prefieras */
-    margin-right: 20px; /* Aumenta el espacio a la derecha para el icono del menú */
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px; /* Ajusta el margen izquierdo si es necesario */
 }
 
-
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px; /* Ajusta el tamaño de la fuente del menú */
+}
 
 .logo {
     width: 50px;
@@ -60,32 +50,10 @@ header {
     margin-right: 30px; /* Ajusta el margen derecho si es necesario */
 }
 
-
 .menu-icon {
-    width: 30px;
+    width: 40px; /* Ajusta el ancho del icono de menú */
     cursor: pointer;
     margin-left: 20px; /* Ajusta el margen izquierdo si es necesario */
-}
-
-nav {
-    flex: 1;
-    text-align: right;
-}
-
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-left: 20px; /* Ajusta el margen izquierdo si es necesario */
-}
-
-nav ul li:first-child {
-    margin-left: 0; /* Elimina el margen izquierdo del primer elemento */
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 13px;
 }
 
 .row {
@@ -109,7 +77,6 @@ p {
     line-height: 35px;
 }
 
-
 button {
     width: 200px; /* Ajusta el ancho del botón */
     height: 50px; /* Ajusta la altura del botón */
@@ -130,6 +97,17 @@ button:hover {
     color: #fff; /* Cambia el color del texto a blanco al pasar por encima */
 }
 
+/* Añade un padding superior a las secciones para que no queden ocultas debajo de la barra de navegación */
+section {
+    padding-top: 80px;
+    margin-top: -80px;
+}
+
+/* Estilo adicional para mejorar la navegación */
+html {
+    scroll-behavior: smooth; /* Habilita el comportamiento de desplazamiento suave en todo el documento */
+}
+
 nav ul li a {
     text-decoration: none;
     color: #fff;
@@ -142,7 +120,7 @@ nav ul li a {
     margin-left: 20px; /* Ajusta el margen izquierdo si es necesario */
 }
 
-/*
+
 #inicio h2 {
     font-size: 2em; 
 }
@@ -202,7 +180,7 @@ nav ul li #boton-busqueda:hover {
     width: 0;
     transition: width 0.3s ease; /* Animación de expansión */
 
-
+}
 #boton-busqueda:hover #campo-busqueda:focus {
     width: 200px; /* Ancho máximo al enfocar */
     border-bottom-color: #2196F3; /* Color de borde al enfocar */
