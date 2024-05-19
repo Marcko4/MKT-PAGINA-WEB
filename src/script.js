@@ -1,3 +1,4 @@
+
 function mostrarCollar() {
     // Obtener los valores seleccionados por el usuario
     var color = document.getElementById("color").value;
@@ -39,3 +40,4 @@ document.getElementById("boton-busqueda").addEventListener("mouseenter" , functi
 document.getElementById("boton-busqueda").addEventListener("mouseleave" , function(){
     textoBusqueda.style.opacity ="0";
 });
+

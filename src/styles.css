@@ -6,19 +6,126 @@ body {
     background-color: #F0F0F0; /* Color de fondo claro */
 }
 
+
+
 header {
-    background-color:  #f1e0ca; /* Color de fondo de la cabecera */
-    color: #000000; /* Color de texto de la cabecera */
-    padding: 10px 0;
-    text-align: center;
+    width: 100;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/background.png);
+    background-position: center;
+    background-size: cover;
+    padding-left: 9%;
+    padding-right: 2%;
+    box-sizing: border-box;
 }
 
+.container {
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0 2%; /* Añade un poco de padding para evitar que los elementos toquen los bordes */
+}
+.navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    padding-left: 20px; /* Ajusta el espacio a la izquierda del logo */
+}
+
+.logo {
+    width: 50px;
+    cursor: pointer;
+    margin-right: 30px; /* Ajusta el margen derecho si es necesario */
+}
+
+
+.menu-icon {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 20px; /* Ajusta el margen izquierdo si es necesario */
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px; /* Ajusta el margen izquierdo si es necesario */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Elimina el margen izquierdo del primer elemento */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col {
+    flex-basis: 60%;
+}
+
+h1 {
+    color: #fff;
+    font-size: 100px;
+}
+
+p {
+    color: #fff;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+
+button {
+    width: 200px; /* Ajusta el ancho del botón */
+    height: 50px; /* Ajusta la altura del botón */
+    color: #000; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    padding: 14px 0; /* Ajusta el relleno del botón */
+    background: #fff; /* Color de fondo */
+    border: 0; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    outline: none; /* Sin contorno */
+    margin-top: 30px; /* Espacio superior */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar por encima */
+    transition: background-color 0.3s, color 0.3s; /* Añade una transición suave */
+}
+
+button:hover {
+    background: #000; /* Cambia el fondo a negro al pasar por encima */
+    color: #fff; /* Cambia el color del texto a blanco al pasar por encima */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px; /* Ajusta el tamaño de la fuente del menú */
+}
+
+.menu-icon {
+    width: 40px; /* Ajusta el ancho del icono de menú */
+    cursor: pointer;
+    margin-left: 20px; /* Ajusta el margen izquierdo si es necesario */
+}
+
+/*
 #inicio h2 {
-    font-size: 2em; /* Aumentar el tamaño del texto */
+    font-size: 2em; 
 }
 
 #inicio p {
-    font-size: 1.5em; /* Aumentar el tamaño del texto */
+    font-size: 1.5em; 
 }
 
 nav ul {
@@ -33,7 +140,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000000; /* Color de texto de los enlaces */
+    color: #000000; 
     font-weight: bold;
 }
 nav ul li a img {
@@ -52,19 +159,19 @@ nav ul li #boton-busqueda:hover {
 #campo-busqueda {
     display: none;
     border: none;
-    border-bottom: 2px solid #D2B48C; /* Color de borde inicial */
+    border-bottom: 2px solid #D2B48C; 
     outline: none;
     font-size: 16px;
     padding: 5px;
-    transition: border-bottom-color 0.3s ease; /* Animación de transición */
+    transition: border-bottom-color 0.3s ease; 
 }
 
 #campo-busqueda::placeholder {
-    color: #D2B48C; /* Color del texto de marcador de posición */
+    color: #D2B48C; 
 }
 
 #barra-busqueda {
-    position: relative; /* Establecer posición relativa para el contenedor de la barra de búsqueda */
+    position: relative; /
 }
 
 #boton-busqueda span {
@@ -78,7 +185,9 @@ nav ul li #boton-busqueda:hover {
 
 #boton-busqueda:hover span {
     opacity: 1;
-}
+}    
+
+*/
 
 main {
     padding: 20px;
@@ -219,6 +328,7 @@ button:hover {
 }
 
 /* Estilos para el rectángulo verde */
+
 .green-background {
     display: flex;
     justify-content: space-between;
@@ -286,7 +396,7 @@ button:hover {
 
 .producto {
     position: relative; /* Establecer posición relativa para el contenedor de producto */
-    width: 250px; /* Ancho máximo del contenedor de producto */
+    width: 350px; /* Ancho máximo del contenedor de producto (aumentado) */
     margin: 20px; /* Margen alrededor de cada producto */
     overflow: hidden; /* Ocultar contenido que desborde */
     border-radius: 10px; /* Bordes redondeados */
@@ -311,12 +421,13 @@ button:hover {
     transform: translate(-50%, -50%); /* Centrar el texto exactamente */
     width: 100%; /* Ancho completo para el texto */
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el texto */
-    padding: 10px; /* Relleno alrededor del texto */
+    padding: 15px; /* Relleno alrededor del texto (aumentado) */
     text-align: center; /* Alinear el texto al centro */
     font-weight: bold; /* Texto en negrita */
     color: #333; /* Color del texto */
-    font-size: 1.5em; /* Tamaño de fuente aumentado */
+    font-size: 2em; /* Tamaño de fuente aumentado */
 }
+
 
 .card {
     border: 1px solid #ccc;
