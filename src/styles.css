@@ -564,3 +564,42 @@ button:hover {
     max-width: 1200px; /* Establece un ancho máximo */
     margin: 0 auto; /* Centrar horizontalmente */
 }
+#color-selector {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color {
+    width: 50px;
+    height: 50px;
+    border: 2px solid transparent;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.color.selected {
+    border-color: black; /* Puedes cambiar este color para resaltar la selección */
+}
+/* Estilos para la etiqueta azul */
+#collar-preview img[data-color="azul"] {
+    transform: scale(2);
+}
+
+/* Estilos para la etiqueta roja */
+#collar-preview img[data-color="rojo"] {
+    transform: scale(2);
+}
+/* Estilos para el texto personalizado */
+#texto-personalizado-preview {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+#collar-personalizado {
+    position: relative;
+}
+
